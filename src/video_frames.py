@@ -46,7 +46,7 @@ def save_video_frames(file_name: str, video_cap, frames_array, fps, save_directo
         crop_laser = frame[600:800,2900:4000] #Laser Profile Image
         crop_prof_screen = frame[1500:2575,:1600] #Profile Window
         #Set file number
-        file_num = int(frame_num / fps + 1)
+        file_num = frame_num + 1 #int(frame_num / fps + 1)
         #Set file path
         file_path = get_file_path(full_frame_name, file_num, save_directory)
         crop_file_path = get_file_path(log_frame_name, file_num, save_directory)
