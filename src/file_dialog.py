@@ -1,5 +1,6 @@
 from tkinter import Tk, filedialog
 from pathlib import Path
+from os import path.join
 
 def initiate_tk_dialog():
     root = Tk()  # pointing root to Tk() to use it as Tk() in program.
