@@ -30,7 +30,7 @@ def save_video_frames(file_name: str, video_cap, frames_array, fps, save_directo
         #Upscale Image using Laplacian Pyramid Super-Resolution Network
         frame = cv2.pyrUp(cv2.pyrUp(frame))
         #Crop frame to get lower left log data
-        crop_log = frame[640:683, 680:1000] #[y1:y2, x1:x2]
+        crop_log = frame[2685:2725, 680:1000] #[y1:y2, x1:x2]
         crop_laser = frame[170:250, 650:1000]
         #Set file number
         file_num = int(frame_num / fps + 1)
