@@ -6,6 +6,7 @@ from src.file_dialog import *
 from os import listdir
 from os.path import isfile, join
 import numpy as np
+import pandas as pd
 import PIL.Image
 from PIL import Image, ImageOps #, ImageFilter, ImageEnhance, 
 import pytesseract
