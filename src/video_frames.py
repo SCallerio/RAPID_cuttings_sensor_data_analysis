@@ -15,6 +15,17 @@ def set_frames_array(seconds_distance, video_cap):
     frames_array = np.arange(0, video_duration, fps*sec, dtype=int)
     return frames_array, fps
 
+def set_frames_array_var(seconds_distance, video_cap, start_sec, finish_sec):
+    #Save video FPS
+    fps = video_cap.get(cv2.CAP_PROP_FPS)
+    #Total Video Frames
+    video_duration = video_cap.get(cv2.CAP_PROP_FRAME_COUNT)
+    sec = seconds_distance
+    video_start = fps*start_sec
+    video_finish = fps*finish_sec
+    frames_array = np.arange(video_start, video_finish, fps*sec, dtype=int)
+    return frames_array, fps
+
 def save_video_frames(file_name: str, video_cap, frames_array, fps, save_directory, save_laser_img = False, save_full_img = False):
     #Set file names
     full_frame_name = '_'.join([file_name, 'full_frame'])
