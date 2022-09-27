@@ -1,2 +1,5 @@
 def sumar(a,b):
   return a+b
+def print_the_first_two_letters_of_cinar():
+    return 'Çı'
+print(print_the_first_two_letters_of_cinar()+'nar')
